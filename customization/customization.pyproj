@@ -27,6 +27,10 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="FlaskWebProject1\global_setting.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FlaskWebProject1\image_process.py" />
     <Compile Include="runserver.py" />
     <Compile Include="FlaskWebProject1\__init__.py" />
     <Compile Include="FlaskWebProject1\views.py" />
@@ -36,14 +40,12 @@
     <Folder Include="FlaskWebProject1\static\" />
     <Folder Include="FlaskWebProject1\static\content\" />
     <Folder Include="FlaskWebProject1\static\fonts\" />
-    <Folder Include="FlaskWebProject1\static\images\" />
     <Folder Include="FlaskWebProject1\static\scripts\" />
     <Folder Include="FlaskWebProject1\templates\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="FlaskWebProject1\static\images\1_1.png" />
-    <Content Include="FlaskWebProject1\static\images\1_2.png" />
-    <Content Include="FlaskWebProject1\static\images\1_3.png" />
+    <Content Include="FlaskWebProject1\templates\design.html" />
+    <Content Include="FlaskWebProject1\templates\img.html" />
     <Content Include="requirements.txt" />
     <Content Include="FlaskWebProject1\static\content\bootstrap.css" />
     <Content Include="FlaskWebProject1\static\content\bootstrap.min.css" />
@@ -67,10 +69,6 @@
     <Content Include="FlaskWebProject1\static\scripts\respond.js" />
     <Content Include="FlaskWebProject1\static\scripts\respond.min.js" />
     <Content Include="FlaskWebProject1\static\scripts\_references.js" />
-    <Content Include="FlaskWebProject1\templates\about.html" />
-    <Content Include="FlaskWebProject1\templates\contact.html" />
-    <Content Include="FlaskWebProject1\templates\index.html" />
-    <Content Include="FlaskWebProject1\templates\layout.html" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Web.targets" />
   <!-- Specify pre- and post-build commands in the BeforeBuild and 
