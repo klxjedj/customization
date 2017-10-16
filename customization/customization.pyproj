@@ -40,10 +40,32 @@
     <Folder Include="FlaskWebProject1\static\" />
     <Folder Include="FlaskWebProject1\static\content\" />
     <Folder Include="FlaskWebProject1\static\fonts\" />
+    <Folder Include="FlaskWebProject1\static\img\" />
     <Folder Include="FlaskWebProject1\static\scripts\" />
     <Folder Include="FlaskWebProject1\templates\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="FlaskWebProject1\static\content\design.css" />
+    <Content Include="FlaskWebProject1\static\img\1.png" />
+    <Content Include="FlaskWebProject1\static\img\10.png" />
+    <Content Include="FlaskWebProject1\static\img\11.png" />
+    <Content Include="FlaskWebProject1\static\img\12.png" />
+    <Content Include="FlaskWebProject1\static\img\13.png" />
+    <Content Include="FlaskWebProject1\static\img\2.png" />
+    <Content Include="FlaskWebProject1\static\img\3.png" />
+    <Content Include="FlaskWebProject1\static\img\4.png" />
+    <Content Include="FlaskWebProject1\static\img\5.png" />
+    <Content Include="FlaskWebProject1\static\img\6.png" />
+    <Content Include="FlaskWebProject1\static\img\7.png" />
+    <Content Include="FlaskWebProject1\static\img\8.png" />
+    <Content Include="FlaskWebProject1\static\img\9.png" />
+    <Content Include="FlaskWebProject1\static\img\v1.png" />
+    <Content Include="FlaskWebProject1\static\img\v2.png" />
+    <Content Include="FlaskWebProject1\static\img\v3.png" />
+    <Content Include="FlaskWebProject1\static\img\v4.png" />
+    <Content Include="FlaskWebProject1\static\img\v5.png" />
+    <Content Include="FlaskWebProject1\static\img\v6.png" />
+    <Content Include="FlaskWebProject1\static\scripts\action.js" />
     <Content Include="FlaskWebProject1\templates\design.html" />
     <Content Include="FlaskWebProject1\templates\img.html" />
     <Content Include="requirements.txt" />

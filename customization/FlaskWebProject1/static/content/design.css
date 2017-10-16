@@ -1,0 +1,283 @@
+div{
+    margin:0;
+    padding:0;
+}
+
+.showArea{
+    position: relative;
+    min-height:320px;
+    overflow:hidden;
+    height: 758px !important;
+    flex-shrink: 0 !important;
+    width: 75% !important;
+    background-color: #f7f7f7;
+    border-color: #e5e5e5;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+.left-button{
+    cursor: initial;
+    z-index: 600;
+    position: absolute;
+    height: 100%;
+    width: 8.33%;
+    min-width: 80px;
+    top: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: none;
+    opacity: 0.4;
+    background-color: transparent;
+    transition: opacity 230ms ease-out;
+    justify-content: flex-start;
+    left: 0px;
+    width: 18.75% !important;
+}
+
+.right-button{
+    cursor: initial;
+    z-index: 600;
+    position: absolute;
+    height: 100%;
+    width: 8.33%;
+    min-width: 80px;
+    top: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: none;
+    opacity: 0.4;
+    background-color: transparent;
+    transition: opacity 230ms ease-out;
+    justify-content: flex-end;
+    right: 0px;
+    width: 18.75% !important;
+}
+
+.render-frame{
+    position: relative;
+    transform: translate(0px, 0px) scale(1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: -75px !important;
+    height: 807px !important;
+}
+
+.view-frame{
+    position: relative;
+    width: 100%;
+    height: 760.95px;
+}
+
+.carousel-show{
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    transition: all 230ms linear;
+    text-align: center;
+    opacity: 1;
+    height: 685.95px;
+}
+
+.carousel-hide{
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    transition: all 230ms linear;
+    text-align: center;
+    opacity: 1;
+    height: 685.95px;
+    display:none;
+}
+
+#designTool{
+    position: relative;
+    flex-shrink: 0;
+    overflow: hidden;
+    width: 25vw;
+}
+
+#wrapper{
+    z-index: 1;
+    top: 0px;
+    position: absolute;
+    display: flex;
+    flex-grow: 1;
+    height: 100%;
+    width: 25vw;
+    margin-left: 0px;
+    border-left: 2px solid rgb(255, 255, 255);
+    
+}
+#ele-list{
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    flex-grow: 1;
+    align-content: flex-end;
+    flex-flow: column nowrap;
+    margin-top: initial;
+    margin-bottom: initial;
+    width: 100%;
+}
+
+.ele{
+    background-color: #f7f7f7;
+    border-color: #e5e5e5;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    border: 2px solid rgb(255, 255, 255);
+    flex-shrink: 0;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+    height: 142px;
+    flex-shrink: 0;
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+}
+
+.ele img{
+    height: 103px;
+    width: 103px;
+}
+
+.ele p{
+    font-family: OneNikeCurrency,Helvetica,Arial,'Heiti SC','ST Heiti',华文黑体,'Microsoft YaHei',雅黑体,SimHei,黑体,sans-serif;
+}
+
+.title-out{
+    z-index: 0;
+    top: 0px;
+    position: absolute;
+    display: flex;
+    flex-grow: 1;
+    height: 100%;
+    width: 25vw;
+    margin-left: 0px;
+    border-left: 2px solid rgb(255, 255, 255);
+}
+
+.title-wrapper{
+    height: 80px;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    flex-grow: 0;
+    flex-shrink: 1;
+    position: absolute;
+    text-align: center;
+    width: 25vw;
+    top: 0px;
+    z-index: 200;
+}
+.title{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    color:rgb(141,141,141);
+    font-family: OneNikeCurrency,Helvetica,Arial,'Heiti SC','ST Heiti',华文黑体,'Microsoft YaHei',雅黑体,SimHei,黑体,sans-serif;
+}
+
+.title p{
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+#color-list{
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    flex-grow: 1;
+    align-content: flex-start;
+    flex-flow: row wrap;
+    margin-top: 90px;
+    margin-bottom: 62px;
+    width: 100%;
+}
+
+.color{
+    position: relative;
+    left: 0px;
+    top: 0px;
+    border-right: 2px solid rgb(255, 255, 255);
+    flex-shrink: 0;
+    box-sizing: border-box;
+    width: 50%;
+    cursor:pointer;
+}
+
+.checked{
+    background-color:#f7f7f7;
+}
+
+.color-icon{
+    display: flex;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0px auto;
+    width: 60px;
+    height: 60px;
+}
+
+.color-name{
+    text-align: center;
+    white-space: nowrap;
+    font-size: 12px;
+    line-height: 19px;
+    padding: 0px 10px;
+    display: block;
+    overflow: hidden;
+}
+
+.palette-control{
+    align-items: stretch;
+    bottom: 0px;
+    display: flex;
+    height: 62px;
+    overflow: hidden;
+    position: absolute;
+    right: 0px;
+    width: 25vw;
+    z-index: 600;
+}
+
+.palette-control button{
+    opacity: 1;
+    cursor: pointer;
+    border: none;
+    flex-grow: 1;
+    box-sizing: border-box;
+}
+
+.carousel-dot{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    transition: all 230ms ease-out;
+    z-index: 600;
+}
+
+.carousel-dot a{
+    display: inline-block;
+    margin: 0px 7px;
+    width: 8px;
+    height: 8px;
+    border-radius: 10px;
+    background-color: rgb(141,141,141);
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+.carousel-dot a span{
+    display:none;
+}

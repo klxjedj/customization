@@ -1,1 +1,125 @@
-﻿
+﻿<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href={{url_for('static',filename="content/design.css")}}>
+    <script src={{url_for('static',filename="scripts/jquery-1.10.2.js")}}></script>
+    <title></title>
+</head>
+
+<body>
+    <div style='display: flex;'>
+
+        <div id="showArea" class="showArea">
+            <div>
+                <div>
+                    <div class='render-frame'>
+                        <div class='view-frame'>
+                            <div class='carousel-show'>
+                                <div style="position: relative; transform: scale(1.14325); transform-origin: center top 0px; z-index: 600;">
+                                    <img src={{ url_for('static',filename='img/v1.png')}}>
+                                </div>
+                            </div>
+                            <div class='carousel-hide'>
+                                <div style="position: relative; transform: scale(1.14325); transform-origin: center top 0px; z-index: 600;">
+                                    <img src={{ url_for('static',filename='img/v2.png')}}>
+                                </div>
+                            </div>
+                            <div class='carousel-hide'>
+                                <div style="position: relative; transform: scale(1.14325); transform-origin: center top 0px; z-index: 600;">
+                                    <img src={{ url_for('static',filename='img/v3.png')}}>
+                                </div>
+                            </div>
+                            <div class='carousel-hide'>
+                                <div style="position: relative; transform: scale(1.14325); transform-origin: center top 0px; z-index: 600;">
+                                    <img src={{ url_for('static',filename='img/v4.png')}}>
+                                </div>
+                            </div>
+                            <div class='carousel-hide'>
+                                <div style="position: relative; transform: scale(1.14325); transform-origin: center top 0px; z-index: 600;">
+                                    <img src={{ url_for('static',filename='img/v5.png')}}>
+                                </div>
+                            </div>
+                            <div class='carousel-hide'>
+                                <div style="position: relative; transform: scale(1.14325); transform-origin: center top 0px; z-index: 600;">
+                                    <img src={{ url_for('static',filename='img/v6.png')}}>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-dot">
+                    <a><span>1</span></a>
+                    <a><span>2</span></a>
+                    <a><span>3</span></a>
+                    <a><span>4</span></a>
+                    <a><span>5</span></a>
+                    <a><span>6</span></a>
+                </div>
+            </div>
+        </div>
+        <div id="designTool">
+            <div id="wrapper">
+                <div id="ele-list">
+
+                    {% for ele in ele_list %}
+                    <div data-name={{ ele }} class="ele">
+                        <a>
+                            <img src='../static/img/{{img_list[ele]}}'>
+                            <p>{{ ele }}</p>
+                        </a>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="title-out">
+                <div class="title-wrapper">
+                    <div class="title">
+                        <p>
+                            内衬
+                        </p>
+                    </div>
+                </div>
+                <div id="color-list">
+
+
+                    {%for col in color_list %}
+                    <div class="color" data-color-id={{color_list.index(col)}}>
+                        <div>
+                            <div class="color-icon" style="background-color:#{{col}}">
+                            </div>
+                            <div>
+                                <p class="color-name">
+                                    {{col}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    {%endfor%}
+                </div>
+                <div class="palette-control">
+                    <button id="cancel">
+                        <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9IjI2cHgiIGhlaWdodD0iMjRweCIgdmlld0JveD0iMCAwIDI2IDI0IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPCEtLSBHZW5lcmF0b3I6IFNrZXRjaCAzLjYuMSAoMjYzMTMpIC0gaHR0cDovL3d3dy5ib2hlbWlhbmNvZGluZy5jb20vc2tldGNoIC0tPgogICAgPHRpdGxlPk1vZGFsIENsb3NlIENvcHk8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZGVmcz48L2RlZnM+CiAgICA8ZyBpZD0iU3BlY3MiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJCMTYtLS1TQVZFX1YzYS1Db3B5LTIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xNzQuMDAwMDAwLCAtMTEzNC4wMDAwMDApIiBzdHJva2U9IiMxMTExMTEiIGZpbGw9IiMxMTExMTEiPgogICAgICAgICAgICA8ZyBpZD0iQm90dG9tQmFyMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMDAwMDAsIDEwODYuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICA8ZyBpZD0iQ2xvc2UtQ29weSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTQzLjAwMDAwMCwgMTYuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTQ2LjU2ODYxODUsNDMuOTA5NjA4MiBMNTUuODM1MDM4NCwzNC41NzUwMzg2IEw1My4yNjc1ODMxLDMyIEw0NC4wMDY0Mzk4LDQxLjMyOTIzOTIgTDM0Ljc0Mjk2NjgsMzIgTDMyLjE3NTUxMTUsMzQuNTc1MDM4NiBMNDEuNDQ0ODAwNSw0My45MDk3MTM5IEwzMiw1My40MjM5NjA2IEwzNC41NjY0OTYyLDU2IEw0NC4wMDcwMzkxLDQ2LjQ5MDAyNjcgTDUzLjQzMzUwMzgsNTUuOTgyOTg2NSBMNTYsNTMuNDA3OTQ4IEw0Ni41Njg2MTg1LDQzLjkwOTYwODIgWiIgaWQ9Ik1vZGFsLUNsb3NlLUNvcHkiPjwvcGF0aD4KICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+" style="width:12px;height:12px;">
+                    </button>
+                    <button id="confirm">
+                        <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9IjM2cHgiIGhlaWdodD0iMzBweCIgdmlld0JveD0iMCAwIDM2IDMwIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPCEtLSBHZW5lcmF0b3I6IFNrZXRjaCAzLjYuMSAoMjYzMTMpIC0gaHR0cDovL3d3dy5ib2hlbWlhbmNvZGluZy5jb20vc2tldGNoIC0tPgogICAgPHRpdGxlPkNoZWNrPC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGRlZnM+PC9kZWZzPgogICAgPGcgaWQ9IlNwZWNzIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyBpZD0iQjE2LS0tU0FWRV9WM2EtQ29weS0yIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNTQ1LjAwMDAwMCwgLTExMzAuMDAwMDAwKSIgc3Ryb2tlPSIjMTExMTExIiBzdHJva2Utd2lkdGg9IjYiPgogICAgICAgICAgICA8ZyBpZD0iQm90dG9tQmFyMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMDAwMDAsIDEwODYuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNNTQ3LjUxNDI4Miw2MC41NDAwMzkxIEw1NTUuODczNTM1LDY4Ljk1NTMyMjMgTDU3OC4yNzE0ODQsNDYuNTYxMDM1MiIgaWQ9IkNoZWNrIj48L3BhdGg+CiAgICAgICAgICAgIDwvZz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==" style="width:12px;height:12px">
+                    </button>
+
+                </div>
+            </div>
+        </div>
+        <div>
+
+
+        </div>
+    </div>
+    <script src={{ url_for('static',filename="scripts/action.js")}}>
+    </script>
+    <script>
+        var config = [2, 1, 4, 3, 6, 5, 8, 7, 10, 9, 12, 11, 12];
+        var config_position,color_code,config_backup;
+
+    </script>
+</body>
+
+</html>
